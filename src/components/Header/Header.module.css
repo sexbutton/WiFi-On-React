@@ -1,0 +1,70 @@
+.main {
+  display: flex;
+  height: 180px;
+  background: linear-gradient(83.24deg, #173cc2 -22.56%, #4d90ff 106.47%);
+  padding-top: 30px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+.container {
+  width: 1300px;
+  margin: 0 auto;
+  gap: 27px;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #fff;
+  text-decoration: none;
+
+  font-family: "Raleway";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.8px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number {
+  color: #fff;
+  text-decoration: none;
+
+  font-family: "Raleway";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  margin: 0;
+
+  transition: 0.2s ease;
+}
+.number a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.comparison:hover {
+  color: #cedfff;
+}
+.number a:hover {
+  color: #cedfff;
+}
