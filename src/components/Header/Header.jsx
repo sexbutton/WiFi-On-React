@@ -5,14 +5,24 @@ import cn from "classnames";
 //КОМПОНЕНТЫ
 import AddressClient from "./AddressClient/AddressClient";
 import Nav from "./Nav/Nav";
+import ComparisonButton from "./Comparison/ComparisonButton";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 //СТАТИКА
 import styles from "./Header.module.css";
-import logo from "./iconLogo.svg";
+import logo from "./iconLogo.png";
 import iconComparison from "./iconComparison.svg";
 import menu from "./iconMenu.svg";
 
 const Header = (props) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [statusHamburgerMenu, setStatusHamburgerMenu] = useState(false);
+
+  const openHamburgerMenu = () => {
+    setStatusHamburgerMenu(true);
+  };
+  const closeHamburgerMenu = () => {
+    setStatusHamburgerMenu(false);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,19 +36,16 @@ const Header = (props) => {
     };
   }, []);
 
-  if (windowWidth > 768) {
+  if (windowWidth > 868) {
     return (
       <header className={styles.main}>
         <div className={styles.container}>
           <div className={styles.top}>
             <Link to={"/"}>
-              <img src={logo} alt="" />
+              <img className={styles.logo} src={logo} alt="" />
             </Link>
             <Nav></Nav>
-            <Link className={styles.comparison} to={"/comparison"}>
-              <img src={iconComparison} alt="" />
-              <span>Сравнение</span>
-            </Link>
+            <ComparisonButton></ComparisonButton>
           </div>
           <div className={styles.bot}>
             <AddressClient></AddressClient>
@@ -49,17 +56,52 @@ const Header = (props) => {
         </div>
       </header>
     );
-  } else if (windowWidth <= 768 && windowWidth >= 360) {
+  } else if (windowWidth <= 868 && windowWidth >= 420) {
     return (
       <header className={styles.main}>
-        <Link to={"/"}>
-          <img src={logo} alt="" />
-        </Link>
-        <AddressClient></AddressClient>
-        <img className={styles.menu} src={menu} alt="" />
+        <div className={styles.containerTablet}>
+          <Link to={"/"}>
+            <img className={styles.logo} src={logo} alt="" />
+          </Link>
+          <AddressClient></AddressClient>
+        </div>
+        <img
+          onClick={openHamburgerMenu}
+          className={styles.iconMenu}
+          src={menu}
+          alt=""
+        />
+        {statusHamburgerMenu && (
+          <HamburgerMenu
+            mobile="true"
+            isOpen={statusHamburgerMenu}
+            onClose={closeHamburgerMenu}
+          />
+        )}
       </header>
     );
   } else {
+    return (
+      <header className={styles.main}>
+        <Link to={"/"}>
+          <img className={styles.logo} src={logo} alt="" />
+        </Link>
+
+        <img
+          onClick={openHamburgerMenu}
+          className={styles.iconMenu}
+          src={menu}
+          alt=""
+        />
+        {statusHamburgerMenu && (
+          <HamburgerMenu
+            mobile="true"
+            isOpen={statusHamburgerMenu}
+            onClose={closeHamburgerMenu}
+          />
+        )}
+      </header>
+    );
   }
 };
 

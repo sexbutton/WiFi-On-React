@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import cn from "classnames";
 
 const Nav = (props) => {
+  const { mobile } = props;
   const [currentPage, setCurrentPage] = useState("");
 
   const handleClick = (page, event) => {
@@ -12,11 +13,15 @@ const Nav = (props) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={cn(styles.main, { [styles.mobileMain]: mobile === "true" })}
+    >
       <Link
         to={"/#aboutUs"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "aboutUs",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("aboutUs", e)}
       >
@@ -26,6 +31,8 @@ const Nav = (props) => {
         to={"/#providers"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "providers",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("providers", e)}
       >
@@ -35,6 +42,8 @@ const Nav = (props) => {
         to={"/tariffs"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "tariffs",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("tariffs", e)}
       >
@@ -44,6 +53,8 @@ const Nav = (props) => {
         to={"/#help"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "help",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("help", e)}
       >
@@ -53,6 +64,8 @@ const Nav = (props) => {
         to={"/#faq"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "faq",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("faq", e)}
       >
@@ -62,6 +75,8 @@ const Nav = (props) => {
         to={"/contacts"}
         className={cn(styles.navElement, {
           [styles.active]: currentPage === "contacts",
+          [styles.colorMobile]: mobile,
+          [styles.colorDesk]: !mobile,
         })}
         onClick={(e) => handleClick("contacts", e)}
       >
