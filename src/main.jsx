@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Main from "./pages/Main.jsx";
+import MainPage from "./pages/MainPage.jsx";
 import Contacts from "./pages/Contacts.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <MainPage />,
   },
   {
     path: "/contacts",
