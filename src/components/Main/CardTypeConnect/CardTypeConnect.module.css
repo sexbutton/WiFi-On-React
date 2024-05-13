@@ -1,7 +1,7 @@
 .main {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #fff;
   border-radius: 50px;
@@ -14,18 +14,29 @@
   width: 230px;
   height: 230px;
 }
+.mainMobile {
+  width: 156px;
+  height: 173px;
+}
 .wrapperImg {
   height: 200px;
   width: 200px;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .wrapperImgTablet {
   height: 151px;
   width: 151px;
 }
 .wrapperImgTablet img {
+  width: 100%;
+}
+.wrapperImgMobile {
+  height: 102px;
+  width: 102px;
+}
+.wrapperImgMobile img {
   width: 100%;
 }
 .main h4 {
@@ -40,5 +51,11 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
+  text-align: left;
+}
+.mainMobile h4 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16.8px;
   text-align: left;
 }

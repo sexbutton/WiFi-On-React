@@ -14,11 +14,13 @@ const CardTypeConnect = (props) => {
         <div
           className={cn(styles.main, {
             [styles.mainTablet]: device === "tablet",
+            [styles.mainMobile]: device === "mobile",
           })}
         >
           <div
             className={cn(styles.wrapperImg, {
               [styles.wrapperImgTablet]: device === "tablet",
+              [styles.wrapperImgMobile]: device === "mobile",
             })}
           >
             <img src={iconInternetTV} alt="" />
@@ -32,11 +34,13 @@ const CardTypeConnect = (props) => {
         <div
           className={cn(styles.main, {
             [styles.mainTablet]: device === "tablet",
+            [styles.mainMobile]: device === "mobile",
           })}
         >
           <div
             className={cn(styles.wrapperImg, {
               [styles.wrapperImgTablet]: device === "tablet",
+              [styles.wrapperImgMobile]: device === "mobile",
             })}
           >
             <img src={iconInternet} alt="" />
@@ -50,11 +54,13 @@ const CardTypeConnect = (props) => {
         <div
           className={cn(styles.main, {
             [styles.mainTablet]: device === "tablet",
+            [styles.mainMobile]: device === "mobile",
           })}
         >
           <div
             className={cn(styles.wrapperImg, {
               [styles.wrapperImgTablet]: device === "tablet",
+              [styles.wrapperImgMobile]: device === "mobile",
             })}
           >
             <img src={iconTV} alt="" />
@@ -68,11 +74,13 @@ const CardTypeConnect = (props) => {
         <div
           className={cn(styles.main, {
             [styles.mainTablet]: device === "tablet",
+            [styles.mainMobile]: device === "mobile",
           })}
         >
           <div
             className={cn(styles.wrapperImg, {
               [styles.wrapperImgTablet]: device === "tablet",
+              [styles.wrapperImgMobile]: device === "mobile",
             })}
           >
             <img src={iconConnection} alt="" />

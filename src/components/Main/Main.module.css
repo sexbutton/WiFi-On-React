@@ -73,6 +73,7 @@
 .botTablet {
   display: flex;
   box-sizing: border-box;
+
   gap: 20px;
   padding: 20px;
   width: 100%;
@@ -103,11 +104,11 @@
   color: #fff;
 }
 .mainMobile {
-  background-image: url(./bg.svg);
+  background-image: url(./bgTablet.svg);
   background-repeat: no-repeat;
-  padding-top: 260px;
+  padding-top: 110px;
   display: flex;
-  gap: 115px;
+  gap: 10px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -115,31 +116,44 @@
 .textAndSearchMobile {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
+  gap: 10px;
 }
 .topMobile {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .botMobile {
   display: flex;
-  gap: 40px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.botMobile::-webkit-scrollbar {
+  display: none;
 }
 .textMobile {
-  width: 621px;
+  width: 318px;
 }
 .textMobile h1 {
   font-family: Raleway;
-  font-size: 68px;
+  font-size: 33px;
   font-weight: 700;
-  line-height: 81.6px;
-  text-align: left;
+  line-height: 40.8px;
+  text-align: center;
+
   color: #fff;
 }
 .textMobile h3 {
   font-family: Raleway;
-  font-size: 30px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 36px;
-  text-align: left;
+  line-height: 18px;
+  text-align: center;
+
   color: #fff;
 }

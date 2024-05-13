@@ -3,6 +3,7 @@ import CardTypeConnect from "./CardTypeConnect/CardTypeConnect";
 import connectionsImg from "./connections.svg";
 import Search from "./Search/Search";
 import { useState, useEffect } from "react";
+import connectionsImgMobile from "./connectionsMobile.png";
 
 const Main = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -40,7 +41,7 @@ const Main = () => {
         </div>
       </div>
     );
-  } else if (windowWidth <= 1280 && windowWidth >= 420) {
+  } else if (windowWidth <= 1280 && windowWidth >= 440) {
     return (
       <div className={styles.mainTablet}>
         <div className={styles.topTablet}>
@@ -77,11 +78,11 @@ const Main = () => {
               <h1>Найди своего идеального провайдера здесь</h1>
               <h3>Подключи интернет / телевидение / связь</h3>
             </div>
-            <Search></Search>
+            <Search device="mobile"></Search>
           </div>
           <img
             className={styles.connectionsImgMobile}
-            src={connectionsImg}
+            src={connectionsImgMobile}
             alt=""
           />
         </div>

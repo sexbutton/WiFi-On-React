@@ -6,12 +6,16 @@ const Search = (props) => {
 
   return (
     <div
-      className={cn(styles.main, { [styles.mainTablet]: device === "tablet" })}
+      className={cn(styles.main, {
+        [styles.mainTablet]: device === "tablet",
+        [styles.mainMobile]: device === "mobile",
+      })}
     >
       <input type="text" placeholder="Введите ваш адрес" />
       <div
         className={cn(styles.buttonSearch, {
           [styles.buttonSearchTablet]: device === "tablet",
+          [styles.buttonSearchMobile]: device === "mobile",
         })}
       >
         <svg
