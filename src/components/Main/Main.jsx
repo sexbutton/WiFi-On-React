@@ -3,7 +3,6 @@ import CardTypeConnect from "./CardTypeConnect/CardTypeConnect";
 import connectionsImg from "./connections.svg";
 import Search from "./Search/Search";
 import { useState, useEffect } from "react";
-import connectionsImgMobile from "./connectionsMobile.png";
 
 const Main = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -82,7 +81,7 @@ const Main = () => {
           </div>
           <img
             className={styles.connectionsImgMobile}
-            src={connectionsImgMobile}
+            src={connectionsImg}
             alt=""
           />
         </div>

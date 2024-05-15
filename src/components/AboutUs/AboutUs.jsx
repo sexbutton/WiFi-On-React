@@ -32,29 +32,31 @@ const AboutUs = (props) => {
           </p>
         </div>
         <table>
-          <tr>
-            <td className={styles.mobileBlock}>
-              <img src={calendarImg} alt="" />
-              <div className={styles.blockText}>
-                <h2>10 лет</h2>
-                <p>сотрудничаем с ведущими интернет — провайдерами страны</p>
-              </div>
-            </td>
-            <td className={cn(styles.mobileBlock, styles.mobileBlock2)}>
-              <img src={groupImg} alt="" />
-              <div className={styles.blockText}>
-                <h2>31452</h2>
-                <p>подключённых клиентов через наш сервис</p>
-              </div>
-            </td>
-            <td className={styles.mobileBlock}>
-              <img src={mapImg} alt="" />
-              <div className={styles.blockText}>
-                <h2>89</h2>
-                <p>регионов, в которых мы подключаем Интернет и ТВ</p>
-              </div>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td className={styles.mobileBlock}>
+                <img src={calendarImg} alt="" />
+                <div className={styles.blockText}>
+                  <h2>10 лет</h2>
+                  <p>сотрудничаем с ведущими интернет — провайдерами страны</p>
+                </div>
+              </td>
+              <td className={cn(styles.mobileBlock, styles.mobileBlock2)}>
+                <img src={groupImg} alt="" />
+                <div className={styles.blockText}>
+                  <h2>31452</h2>
+                  <p>подключённых клиентов через наш сервис</p>
+                </div>
+              </td>
+              <td className={styles.mobileBlock}>
+                <img src={mapImg} alt="" />
+                <div className={styles.blockText}>
+                  <h2>89</h2>
+                  <p>регионов, в которых мы подключаем Интернет и ТВ</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );
@@ -71,31 +73,33 @@ const AboutUs = (props) => {
           </p>
         </div>
         <table>
-          <tr>
-            <td className={cn(styles.block, styles.block1)}>
-              <img src={calendarImg} alt="" />
-            </td>
-            <td className={styles.block}>
-              <h2>10 лет</h2>
-              <p>сотрудничаем с ведущими интернет — провайдерами страны</p>
-            </td>
-            <td className={cn(styles.block, styles.block3)}>
-              <img src={mapImg} alt="" />
-            </td>
-          </tr>
-          <tr>
-            <td className={cn(styles.block, styles.block4)}>
-              <h2>31452</h2>
-              <p>подключённых клиентов через наш сервис</p>
-            </td>
-            <td className={styles.block}>
-              <img src={groupImg} alt="" />
-            </td>
-            <td className={cn(styles.block, styles.block6)}>
-              <h2>89</h2>
-              <p>регионов, в которых мы подключаем Интернет и ТВ</p>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td className={cn(styles.block, styles.block1)}>
+                <img src={calendarImg} alt="" />
+              </td>
+              <td className={styles.block}>
+                <h2>10 лет</h2>
+                <p>сотрудничаем с ведущими интернет — провайдерами страны</p>
+              </td>
+              <td className={cn(styles.block, styles.block3)}>
+                <img src={mapImg} alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td className={cn(styles.block, styles.block4)}>
+                <h2>31452</h2>
+                <p>подключённых клиентов через наш сервис</p>
+              </td>
+              <td className={styles.block}>
+                <img src={groupImg} alt="" />
+              </td>
+              <td className={cn(styles.block, styles.block6)}>
+                <h2>89</h2>
+                <p>регионов, в которых мы подключаем Интернет и ТВ</p>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
     );
