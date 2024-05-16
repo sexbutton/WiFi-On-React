@@ -11,14 +11,34 @@
 
   transition: 0.5s ease;
 }
+
 .main:hover {
   background-color: #173cc2;
-  transform: scale(1.04);
 }
 .main:hover p,
 .main:hover span {
   color: #fff;
 }
+.main:hover .buttonDetails svg path,
+.main:hover .detailsAndComparison svg path,
+.main:hover .detailsAndComparison svg line {
+  fill: #fff;
+  stroke: #fff;
+}
+.main:hover .detailsAndComparison svg rect {
+  stroke: #fff;
+}
+.main:hover .buttonConnect {
+  background: #fff;
+  color: #173cc2;
+}
+.main:hover .wrapperImgParam {
+  background: #fff;
+}
+.main:hover .wrapperImgParam svg path {
+  fill: #173cc2;
+}
+
 .logoAndName {
   display: flex;
   align-items: center;
@@ -59,6 +79,20 @@
   align-items: center;
   gap: 10px;
 }
+.wrapperImgParam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(84.99deg, #2c55e8 -33.77%, #7eaefe 119.02%);
+  transition: 0.5s ease;
+}
+.wrapperImgParam svg path {
+  fill: #fff;
+  transition: 0.5s ease;
+}
 .paramText {
   display: flex;
   flex-direction: column;
@@ -80,10 +114,18 @@
   align-items: center;
   justify-content: space-between;
 }
+.detailsAndComparison svg {
+  cursor: pointer;
+}
+.detailsAndComparison svg:hover {
+  transform: scale(1.1);
+}
 .buttonDetails {
   display: flex;
   align-items: center;
   gap: 5px;
+
+  cursor: pointer;
 
   font-size: 14px;
   font-weight: 500;
@@ -93,6 +135,9 @@
   color: #578fec;
 
   transition: 0.5s ease;
+}
+.buttonDetails:hover {
+  transform: scale(1.05);
 }
 .priceAndButton {
   display: flex;
@@ -153,6 +198,7 @@
 }
 .buttonConnect {
   background: linear-gradient(83.24deg, #173cc2 -22.56%, #4d90ff 106.47%);
+
   font-family: Raleway;
   font-size: 14px;
   font-weight: 500;
@@ -165,4 +211,9 @@
   box-sizing: border-box;
   cursor: pointer;
   height: 40px;
+
+  transition: 0.5s ease;
+}
+.buttonConnect:hover {
+  transform: scale(1.05);
 }

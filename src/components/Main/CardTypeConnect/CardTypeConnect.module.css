@@ -9,6 +9,11 @@
   height: 290px;
   box-shadow: 3.97px 39.66px 55.52px 7.93px #0000000d;
   flex-shrink: 0;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.main:hover {
+  transform: scale(1.1);
 }
 .mainTablet {
   width: 230px;

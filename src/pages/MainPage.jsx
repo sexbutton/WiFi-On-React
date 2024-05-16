@@ -4,6 +4,7 @@ import ProvidersInCity from "../components/ProvidersInCity/ProvidersInCity";
 import AboutUs from "../components/AboutUs/AboutUs";
 import MySlider from "../components/Slider/MySlider";
 import Advantages from "../components/Advantages/Advantages";
+import ConnectionSteps from "../components/ConnectionSteps/ConnectionSteps";
 function MainPage() {
   return (
     <>
@@ -13,6 +14,7 @@ function MainPage() {
       <MySlider></MySlider>
       <AboutUs></AboutUs>
       <Advantages></Advantages>
+      <ConnectionSteps></ConnectionSteps>
     </>
   );
 }
