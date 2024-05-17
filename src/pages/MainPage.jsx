@@ -5,6 +5,10 @@ import AboutUs from "../components/AboutUs/AboutUs";
 import MySlider from "../components/Slider/MySlider";
 import Advantages from "../components/Advantages/Advantages";
 import ConnectionSteps from "../components/ConnectionSteps/ConnectionSteps";
+import HelpForm from "../components/HelpForm/HelpForm";
+import Questions from "../components/Questions/Questions";
+import Cities from "../components/Cities/Cities";
+import Newsletter from "../components/Newsletter/Newsletter";
 function MainPage() {
   return (
     <>
@@ -15,6 +19,10 @@ function MainPage() {
       <AboutUs></AboutUs>
       <Advantages></Advantages>
       <ConnectionSteps></ConnectionSteps>
+      <HelpForm></HelpForm>
+      <Questions></Questions>
+      <Cities></Cities>
+      <Newsletter></Newsletter>
     </>
   );
 }
