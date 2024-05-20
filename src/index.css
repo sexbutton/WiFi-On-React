@@ -5,6 +5,7 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 180px;
 }
 @font-face {
   font-family: "Raleway";
@@ -59,4 +60,9 @@ body {
   src: local("Raleway"), url(./fonts/Raleway-Black.ttf) format("truetype");
   font-weight: 900;
   font-size: normal;
+}
+@media screen and (max-width: 886px) {
+  body {
+    padding-top: 115px;
+  }
 }

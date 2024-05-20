@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardTariff from "../CardTariff/CardTariff";
-import styles from "./MySlider.module.css";
+import styles from "./SliderTariffs.module.css";
 import cn from "classnames";
 
-const MySlider = () => {
+const SliderTariffs = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   let sliderRef = useRef(null);
   const next = () => {
@@ -602,4 +602,4 @@ const MySlider = () => {
   }
 };
 
-export default MySlider;
+export default SliderTariffs;

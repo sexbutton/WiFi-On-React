@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import MainPage from "./pages/MainPage.jsx";
-import Contacts from "./pages/Contacts.jsx";
+import MainPage from "./pages/MainPage";
+import Contacts from "./pages/Contacts";
+import Tariffs from "./pages/Tariffs";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/contacts",
     element: <Contacts />,
+  },
+  {
+    path: "/Tariffs",
+    element: <Tariffs />,
   },
 ]);
 
