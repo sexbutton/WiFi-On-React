@@ -2,7 +2,7 @@ import Header from "../components/Header/Header";
 import Main from "../components/Main/Main";
 import ProvidersInCity from "../components/ProvidersInCity/ProvidersInCity";
 import AboutUs from "../components/AboutUs/AboutUs";
-import SliderTariffs from "../components/SliderTariffs/SliderTariffs";
+import SliderTariffsMain from "../components/SliderTariffsMain/SliderTariffsMain";
 import Advantages from "../components/Advantages/Advantages";
 import ConnectionSteps from "../components/ConnectionSteps/ConnectionSteps";
 import HelpForm from "../components/HelpForm/HelpForm";
@@ -16,7 +16,7 @@ function MainPage() {
       <Header></Header>
       <Main></Main>
       <ProvidersInCity></ProvidersInCity>
-      <SliderTariffs></SliderTariffs>
+      <SliderTariffsMain></SliderTariffsMain>
       <AboutUs></AboutUs>
       <Advantages></Advantages>
       <ConnectionSteps></ConnectionSteps>
