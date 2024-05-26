@@ -1,80 +1,25 @@
 .main {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  margin-top: 240px;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 200px auto 0 auto;
 }
+
 .main h2 {
   font-family: Raleway;
   font-size: 44px;
   font-weight: 700;
   line-height: 61.6px;
+  margin: 10px;
   text-align: center;
-  margin: 0;
 }
-.main h4 {
-  font-family: Raleway;
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 30.8px;
-  letter-spacing: 0.02em;
-  text-align: center;
-  margin: 25px 0;
-}
-.containerSlider {
+.wrapperCards {
   display: flex;
-
   align-items: center;
   justify-content: center;
-}
-.arrowLeft {
-  margin-right: 55px;
-}
-.arrowRight {
-  margin-left: 35px;
-}
-.slider {
-  width: 1020px;
-  flex-shrink: 0;
-}
-.sliderTablet {
-  width: 480px;
-  flex-shrink: 0;
-}
-.sliderMobile {
-  width: 300px;
-  flex-shrink: 0;
-}
-@media screen and (max-width: 1250px) {
-  .main h2 {
-    font-family: Raleway;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 44.8px;
-    text-align: center;
-  }
-  .main h4 {
-    font-family: Raleway;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 22.4px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    margin: 10px 0;
-  }
-}
-@media screen and (max-width: 700px) {
-  .main h2 {
-    font-family: Raleway;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-  }
-  .main h4 {
-    font-family: Raleway;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 16.8px;
-    text-align: center;
-  }
+  gap: 20px;
+  max-width: 1000px;
 }

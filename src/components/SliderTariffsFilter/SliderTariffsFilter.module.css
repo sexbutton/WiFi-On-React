@@ -4,9 +4,9 @@
 }
 .sliderContainer {
   width: 1250px;
-}
-.card {
-  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .buttons {
   display: flex;

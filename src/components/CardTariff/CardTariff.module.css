@@ -1,5 +1,5 @@
 .main {
-  max-height: 595px;
+  height: 595px;
   width: 290px;
   display: flex;
   flex-direction: column;

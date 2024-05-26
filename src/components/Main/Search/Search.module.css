@@ -1,36 +1,48 @@
 .main {
   display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 640px;
+  gap: 2px;
+}
+.search {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  width: 730px;
-  height: 90px;
+  width: 100%;
+  height: 60px;
   background-color: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 50px;
   box-shadow: 5px 50px 70px 10px #00000012;
+  padding: 1px;
 }
-.mainTablet {
+.searchTablet {
   width: 328px;
   height: 44px;
 }
-.mainMobile {
+.searchMobile {
   width: 310px;
   height: 44px;
 }
-.main input {
+.search input {
   border: none;
   padding-left: 50px;
   border-radius: 50px;
 
+  width: 100%;
+
   font-family: Raleway;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 26px;
   text-align: left;
   height: 100%;
 }
-.mainTablet input {
+.searchTablet input {
   border: none;
   padding-left: 50px;
   border-radius: 50px;
@@ -40,7 +52,7 @@
   line-height: 16.8px;
   text-align: left;
 }
-.mainMobile input {
+.searchMobile input {
   padding-left: 20px;
 
   font-size: 14px;
@@ -48,14 +60,15 @@
   line-height: 16.8px;
   text-align: left;
 }
-.main input:focus {
+.search input:focus {
   outline: none;
 }
 
 .buttonSearch {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   display: flex;
+  flex-shrink: 0;
   box-sizing: border-box;
   align-items: center;
   justify-content: center;
@@ -64,6 +77,10 @@
   box-shadow: 0px 8px 30px 1px #3b77e633;
   background: linear-gradient(311.67deg, #3b77e6 2.28%, #305aea 78.75%);
   border: 2px solid transparent;
+}
+.buttonSearch svg {
+  height: 15px;
+  width: 15px;
 }
 
 .buttonSearchTablet {
@@ -95,4 +112,31 @@
 .buttonSearch:hover svg path {
   fill: #305aea;
   transition: 0.3s ease;
+}
+.suggestions {
+  display: none;
+  position: absolute;
+  top: 62px;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 8px;
+  background-color: #fff;
+  border: solid 1px #e6e6e6;
+  border-radius: 30px;
+  padding: 25px;
+}
+.suggestionsActive {
+  display: flex;
+}
+.suggestions p {
+  cursor: pointer;
+  margin: 0;
+
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: left;
+  height: 100%;
 }
