@@ -8,7 +8,7 @@ import ConnectionSteps from "../components/ConnectionSteps/ConnectionSteps";
 import HelpForm from "../components/HelpForm/HelpForm";
 import Questions from "../components/Questions/Questions";
 import Cities from "../components/Cities/Cities";
-import Newsletter from "../components/Newsletter/Newsletter";
+import NewsLetter from "../components/NewsLetter/NewsLetter";
 import Footer from "../components/Footer/Footer";
 function MainPage() {
   return (
@@ -16,14 +16,13 @@ function MainPage() {
       <Header></Header>
       <Main></Main>
       <ProvidersInCity></ProvidersInCity>
-      <SliderTariffsMain></SliderTariffsMain>
       <AboutUs></AboutUs>
       <Advantages></Advantages>
       <ConnectionSteps></ConnectionSteps>
       <HelpForm></HelpForm>
       <Questions></Questions>
       <Cities></Cities>
-      <Newsletter></Newsletter>
+      <NewsLetter></NewsLetter>
       <Footer></Footer>
     </>
   );

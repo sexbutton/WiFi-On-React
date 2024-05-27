@@ -3,12 +3,16 @@ import Tariff from "../components/Tariff/Tariff";
 import Footer from "../components/Footer/Footer";
 import HelpForm from "../components/HelpForm/HelpForm";
 import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function TariffDesc() {
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get("id");
+
   const [tariff, setTariff] = useState({});
 
   useEffect(() => {
-    fetch(`/api/get_tariff?id=2147`)
+    fetch(`/api/get_tariff?id=${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -22,7 +26,7 @@ function TariffDesc() {
         console.error("Fetch error:", error);
       });
   }, []);
-  console.log(tariff);
+
   return (
     <>
       <Header></Header>

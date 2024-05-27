@@ -1,13 +1,12 @@
 import styles from "./CardTariff.module.css";
-import mtsLogo from "./img/providers/mts.png";
+import { Link } from "react-router-dom";
 
 const CardTariff = ({ tariff }) => {
-  console.log(tariff);
   return (
     <div className={styles.main}>
       <div className={styles.logoAndName}>
         <img
-          src={`/src/components/CardTariff/img/providers/${tariff.provider.img}`}
+          src={`/src/components/CardTariff/imgs/providers/${tariff.provider.img}`}
           alt=""
         />
         <span>{tariff.provider.name}</span>
@@ -18,7 +17,7 @@ const CardTariff = ({ tariff }) => {
           <div key={i} className={styles.param}>
             <div className={styles.wrapperImgParam}>
               <img
-                src={`/src/components/CardTariff/img/params/${paramMain.img}`}
+                src={`/src/components/CardTariff/imgs/params/${paramMain.img}`}
                 alt=""
               />
             </div>
@@ -34,7 +33,7 @@ const CardTariff = ({ tariff }) => {
       </div>
       <div className={styles.detailsAndComparison}>
         <div className={styles.buttonDetails}>
-          <span>Подробнее о тарифе</span>
+          <Link to={`/tariff?id=${tariff.id}`}>Подробнее о тарифе</Link>
           <svg
             width="10"
             height="10"

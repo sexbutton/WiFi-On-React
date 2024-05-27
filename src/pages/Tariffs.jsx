@@ -6,12 +6,15 @@ import HelpForm from "../components/HelpForm/HelpForm";
 import Footer from "../components/Footer/Footer";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Tariffs = () => {
   const [searchParams] = useSearchParams();
   const address = searchParams.get("address");
 
-  const [tariffs, setTariffs] = useState({});
+  const [tariffs, setTariffs] = useState([]);
+  const [providers, setProviders] = useState([]);
+  const [filterProviders, setFilterProviders] = useState([]);
 
   useEffect(() => {
     if (address) {
@@ -23,7 +26,9 @@ const Tariffs = () => {
           return response.json();
         })
         .then((data) => {
-          setTariffs(data);
+          console.log(data);
+          setTariffs(data.tariffs);
+          setProviders(data.providers);
         })
         .catch((error) => {
           console.error("Fetch error:", error);
@@ -34,9 +39,9 @@ const Tariffs = () => {
   return (
     <>
       <Header />
-      <SliderProviders providers={tariffs.providers} />
+      <SliderProviders providers={providers} />
       <Filter />
-      <SliderTariffsFilter tariffs={tariffs.tariffs} />
+      <SliderTariffsFilter allTariffs={tariffs} />
       <HelpForm />
       <Footer />
     </>

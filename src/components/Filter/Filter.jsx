@@ -2,8 +2,9 @@ import Checkbox from "./Checkbox/Checkbox";
 import RangeSlider from "./RangeSlider/RangeSlider";
 import styles from "./Filter.module.css";
 import arrowIcon from "./imgs/iconArrow.png";
+import { useState } from "react";
 
-const Filter = () => {
+const Filter = (infoFilter) => {
   return (
     <div className={styles.mainContainer}>
       <h2>Тарифы</h2>
@@ -41,7 +42,7 @@ const Filter = () => {
             </div>
             <div className={styles.checkboxesContainer}>
               <div className={styles.nameCheckboxes}>
-                <span>Провайдер</span>
+                <span>Тип тарифа</span>
                 <p></p>
               </div>
               <Checkbox label="Интернет" />

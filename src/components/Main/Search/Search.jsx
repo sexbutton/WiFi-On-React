@@ -85,9 +85,11 @@ const Search = ({ device }) => {
           [styles.suggestionsActive]: suggestions.length > 0,
         })}
       >
-        {suggestions.map(
-          (suggestion, i) =>
-            suggestion.data.fias_level === "8" && (
+        {suggestions.map((suggestion, i) => {
+          if (suggestion.data.fias_level !== "8") {
+            return <p onClick={clickSuggestion}>{suggestion.value}</p>;
+          } else {
+            return (
               <Link
                 onClick={clickSuggestion}
                 key={i}
@@ -96,8 +98,9 @@ const Search = ({ device }) => {
               >
                 {suggestion.value}
               </Link>
-            )
-        )}
+            );
+          }
+        })}
       </div>
     </div>
   );

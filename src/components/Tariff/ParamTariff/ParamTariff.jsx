@@ -23,7 +23,9 @@ function ParamTariff({ title, params, img, equipmen = false }) {
                 <Switcher></Switcher>
                 <span>{param.name}</span>
               </div>
-              <span>{param.value}</span>
+              <span>
+                {param.value} {param.value_type}
+              </span>
             </div>
           ))}
         </div>
@@ -40,7 +42,9 @@ function ParamTariff({ title, params, img, equipmen = false }) {
           {params.map((param, i) => (
             <div key={i} className={styles.param}>
               <p>{param.name}</p>
-              <span>{param.value}</span>
+              <span>
+                {param.value} {param.value_type}
+              </span>
             </div>
           ))}
         </div>

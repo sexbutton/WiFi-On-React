@@ -9,36 +9,12 @@
   border: 1px solid #4d90ff;
   border-radius: 40px;
 
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
-
 .main:hover {
-  background-color: #173cc2;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #173cc2;
 }
-.main:hover p,
-.main:hover span {
-  color: #fff;
-}
-.main:hover .buttonDetails svg path,
-.main:hover .detailsAndComparison svg path,
-.main:hover .detailsAndComparison svg line {
-  fill: #fff;
-  stroke: #fff;
-}
-.main:hover .detailsAndComparison svg rect {
-  stroke: #fff;
-}
-.main:hover .buttonConnect {
-  background: #fff;
-  color: #173cc2;
-}
-.main:hover .wrapperImgParam {
-  background: #fff;
-}
-.main:hover .wrapperImgParam svg path {
-  fill: #173cc2;
-}
-
 .logoAndName {
   display: flex;
   align-items: center;
@@ -135,6 +111,10 @@
   color: #578fec;
 
   transition: 0.5s ease;
+}
+.buttonDetails a {
+  color: #000;
+  text-decoration: none;
 }
 .buttonDetails:hover {
   transform: scale(1.05);

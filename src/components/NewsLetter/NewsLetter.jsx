@@ -1,4 +1,4 @@
-import styles from "./Newsletter.module.css";
+import styles from "./NewsLetter.module.css";
 import cn from "classnames";
 import Input from "../Input/Input";
 import saleIcon from "./imgs/saleIcon.png";
